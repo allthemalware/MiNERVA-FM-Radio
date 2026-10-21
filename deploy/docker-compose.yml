@@ -6,7 +6,7 @@
 #   3. docker compose up -d   ->   http://localhost:8080/
 services:
   station:
-    image: ghcr.io/thewhytewolf/minerva-fm-station:latest
+    image: ghcr.io/allthemalware/minerva-fm-station:latest
     container_name: minerva-fm-station
     ports:
       - "${HTTP_PORT:-8080}:8080"

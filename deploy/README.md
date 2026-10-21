@@ -14,10 +14,10 @@ docker compose up -d          # 3. -> http://localhost:8080/  (click TUNE IN)
 - All formats decode in-container (ffmpeg+libgme for VGM/VGZ/SPC/NSF, sidplayfp for SID).
 
 ## Image access
-The image is pulled from `ghcr.io/thewhytewolf/minerva-fm-station`. If it's **private**, the
+The image is pulled from `ghcr.io/allthemalware/minerva-fm-station`. If it's **private**, the
 recipient needs one of:
 - `docker login ghcr.io` with a PAT that has `read:packages`, **or**
-- a tarball you hand them: `docker save ghcr.io/thewhytewolf/minerva-fm-station | gzip > station.tar.gz`
+- a tarball you hand them: `docker save ghcr.io/allthemalware/minerva-fm-station | gzip > station.tar.gz`
   then `docker load < station.tar.gz`.
 
 ## Update

@@ -17,7 +17,7 @@ desktop required.
 Needs Docker and your own music (none ships — copyright).
 
 ```bash
-git clone https://github.com/TheWhyteWolf/MiNERVA-FM-Radio
+git clone https://github.com/allthemalware/MiNERVA-FM-Radio
 cd MiNERVA-FM-Radio
 docker compose -f docker-compose.station.yml up --build
 ```
@@ -34,7 +34,7 @@ http://localhost:8080/ and click TUNE IN. The first run builds the image (a few 
 | Prebuilt image | copy `deploy/`, `cp .env.example .env`, add music, `docker compose up -d` | GHCR access* |
 | By hand | `docker build -f Dockerfile.station -t minerva-fm-station .` then `docker run -p 8080:8080 -v /your/music:/music:ro -e ICECAST_SOURCE_PASS=… -e BRIDGE_TOKEN=… minerva-fm-station` | this repo |
 
-\* The image is `ghcr.io/thewhytewolf/minerva-fm-station`. If it is private the recipient needs
+\* The image is `ghcr.io/allthemalware/minerva-fm-station`. If it is private the recipient needs
 `docker login ghcr.io` (a PAT with `read:packages`), or a tarball you hand them
 (`docker save … | gzip > station.tar.gz` then `docker load < station.tar.gz`).
 
